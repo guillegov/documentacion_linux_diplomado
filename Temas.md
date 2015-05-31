@@ -199,42 +199,42 @@
 -----
 > **Instalar el GRUB seleccionar Si**
 
------
 
 ###2. - Aumentar Tamaño del Disco###
 
 -----
-> ** lvextend -L +100M /dev/mapper/nombre_grupo_volumen-PARTICION**
+> **lvextend -L +100M /dev/mapper/nombre_grupo_volumen-PARTICION**
 
 -----
-> ** Aumenta el tamaño del disco en 100 megas**
+> **Aumenta el tamaño del disco en 100 megas**
 
 -----
-> ** umount /dev/mapper/nombre_grupo_volumen-PARTICION**
+> **umount /dev/mapper/nombre_grupo_volumen-PARTICION**
 
 -----
-> ** Desmontar el disco**
+> **Desmontar el disco**
 
 -----
-> ** e2fsck -f /dev/mapper/nombre_grupo_volumen-PARTICION**
+> **e2fsck -f /dev/mapper/nombre_grupo_volumen-PARTICION**
 
 -----
-> ** Verifica la partición**
+> **Verifica la partición**
 
 -----
-> ** resize2fs /dev/mapper/nombre_grupo_volumen-PARTICION**
+> **resize2fs /dev/mapper/nombre_grupo_volumen-PARTICION**
 
 -----
-> ** Redimensiona el sistema de archivo de la particion indicada**
+> **Redimensiona el sistema de archivo de la particion indicada**
 
 -----
-> ** mount /dev/mapper/nombre_gruupo_volumen-PARTICION**
+> **mount /dev/mapper/nombre_gruupo_volumen-PARTICION**
 
 -----
->** Monta la partición**
+>**Monta la partición**
 
 
 ###3. - Reducir Tamaño del Disco###
+
 -----
 > ** umount /dev/mapper/nombre_grupo_volumen-PARTICION**
 
