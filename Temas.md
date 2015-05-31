@@ -230,167 +230,167 @@
 > Desmontar el disco
 
 -----
-> ** e2fsck -f /dev/mapper/nombre_grupo_volumen-PARTICION**
+> **e2fsck -f /dev/mapper/nombre_grupo_volumen-PARTICION**
 > Verifica la partición
 
 -----
-> ** resize2fs /dev/mapper/nombre_grupo_volumen-PARTICION  tamaño_disco_a_llegar**
+> **resize2fs /dev/mapper/nombre_grupo_volumen-PARTICION  tamaño_disco_a_llegar**
 > Redimensiona el sistema de archivo de la particion indicada al tamaño de disco a llegar
 
 -----
-> ** mount /dev/mapper/nombre_gruupo_volumen-PARTICION**
+> **mount /dev/mapper/nombre_gruupo_volumen-PARTICION**
 > Monta la partición
 
 -----
-> ** lvreduce -L tamaño_a_reducir_disco /dev/directorio_grupo/directorio_particion**
+> **lvreduce -L tamaño_a_reducir_disco /dev/directorio_grupo/directorio_particion**
 > Reduce el tamaño del disco a la cantidad indicada
 
 
 ###4. - Partición Fisica, Grupo de Volumen y Volumen Lógico###
 
 -----
-> ** fdisk -l**
+> **fdisk -l**
 > Muestra particiones del disco
 
 -----
-> ** cfdisk /dev/sda (ruta del disco)**
+> **cfdisk /dev/sda (ruta del disco)**
 > Crea partición del disco
 
 -----
-> ** pvcreate /dev/sda1 (ruta de la particion del disco)**
+> **pvcreate /dev/sda1 (ruta de la particion del disco)**
 > Crea partición fisica
 
 -----
-> ** vgcreate nombre_volumen_grupo /dev/sda1 (ruta de la particion del disco)**
+> **vgcreate nombre_volumen_grupo /dev/sda1 (ruta de la particion del disco)**
 > Crea volumen de grupo
 
 -----
-> ** lvcreate -L tamaño_particion_disco -n nombre_particion nombre_volumen_grupo**
+> **lvcreate -L tamaño_particion_disco -n nombre_particion nombre_volumen_grupo**
 > Muestra nuevo volumen fisico
 
 -----
-> ** lvs**
+> **lvs**
 > Muestra nuevo volumen
 
 -----
-> ** mkfs.ext3 -m 0 /dev/mapper/nombre_volumnen_grupo-nombre_particion**
+> **mkfs.ext3 -m 0 /dev/mapper/nombre_volumnen_grupo-nombre_particion**
 > Da Formato de archivos a la particion indicada
 
 -----
-> ** mkdir /mnt/nombre_particion**
+> **mkdir /mnt/nombre_particion**
 > Crea directorio con nombre de la partición
 
 -----
-> ** mount /dev/mapper/nombre_volumen_grupo-nombre-particion   /mnt/nombre_particion**
+> **mount /dev/mapper/nombre_volumen_grupo-nombre-particion   /mnt/nombre_particion**
 > Monta la grupo de volumen de disco de la particion en el directorio creado
 
 -----
-> ** nano /etc/fstab**
+> **nano /etc/fstab**
 > Editar el archivo fstab para que monte automaticamente la particion
 
 -----
-> ** dev/mapper/nombre_volumen_grupo-nombre-particion   /mnt/nombre_particion ext3 defaul   0   2**
+> **dev/mapper/nombre_volumen_grupo-nombre-particion   /mnt/nombre_particion ext3 defaul   0   2**
 
 
 ###5. - Particionar Graficamente con Gparted Live###
 
 -----
-> ** sudo qemu-img resize lvm1.img  +7GB**
+> **sudo qemu-img resize lvm1.img  +7GB**
 > Aumenta el tamaño del disco virtual en 7 GB
 
 -----
-> ** Bootear gpartedlive**
+> **Bootear gpartedlive**
 > Expandir la partición extendida con la flecha hasta el tamaño deseado
 
------
-> ** Expandir la partición LVM con la flecha hasta del tamaño deseado**
+----
+> **Expandir la partición LVM con la flecha hasta del tamaño deseado**
 > Aplicar los cambios
 
 -----
-> ** Reiniciar la maquina virtual**
+> **Reiniciar la maquina virtual**
 > fdisk -l /dev/sda (ruta del disco)
 
 -----
-> ** Muestra que la partición ha sido redimensionada**
+> **Muestra que la partición ha sido redimensionada**
 
 
 ###6. - Administración de las redes en Debian###
 
 -----
-> ** gnome-control-center network**
+> **gnome-control-center network**
 > Configuración en modo grafico
 
 -----
-> ** nano /etc/network/interfaces**
+> **nano /etc/network/interfaces**
 > Configuración en modo texto
 
 -----
-> ** ls -l /sys/class/net**
+> **ls -l /sys/class/net**
 > Ver redes
 
 -----
-> ** nano etc/network/interfaces**
+> **nano etc/network/interfaces**
 > Abrimos el archivo de configuración de la interfaz de red y adicionamos
 
 -----
-> ** iface eth0 inet DHCP**
+> **iface eth0 inet DHCP**
 > Configura la interfaz de red eth0 como DHCP
 
 -----
-> ** iface eth1 inet static**
+> **iface eth1 inet static**
 > **address 192.168.122.100**
-> ** netmask 255.255.255.0**
-> ** gateway 192.168.122.1**
+> **netmask 255.255.255.0**
+> **gateway 192.168.122.1**
 
 -----
-> ** service networking restart**
+> **service networking restart**
 > Reinicia el servicio de red
 
 
 ###7. - Administración del Servicio SSH###
 
 -----
-> ** apt-get install ssh**
+> **apt-get install ssh**
 > Instalando el paquete ssh
 
 -----
-> ** netstat -natp**
+> **netstat -natp**
 > Ver puertos abiertos
 
 -----
-> ** service ssh restart**
+> **service ssh restart**
 > Reinicia el servicio
 
 -----
-> ** ssh usuario@192.168.5.100**
+> **ssh usuario@192.168.5.100**
 > Se conecta con el usuario
 
 
 ###8. - Administración de Llaves Públicas###
 
 -----
-> ** ssh -keygen -t isa -b 2048**
+> **ssh -keygen -t isa -b 2048**
 > Genera llave de 2048
 
 -----
-> ** ssh-copy-id -i /home/usuario/.ssh/id-rsa.pub   root@192.168.5.100**
+> **ssh-copy-id -i /home/usuario/.ssh/id-rsa.pub   root@192.168.5.100**
 > Copia el id al usuario root
 
 -----
-> ** nano /etc/ssh/sshd_config**
+> **nano /etc/ssh/sshd_config**
 > Editar archivo sshd_config
 
 -----
-> ** cambia PubleyAutentication	yes**
+> **cambia PubleyAutentication	yes**
 
 ---
 > **sudo chown root:usuario archivo**
 > Cambia de usuarios
 
 ---
-> ** sudo useradd  usuario1**
+> **sudo useradd  usuario1**
 > Adiciona nuevo usuario1
 
 -----
-> ** sudo passwd  usuario1**
+> **sudo passwd  usuario1**
 > Cambia la contraseña del usuario1
