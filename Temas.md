@@ -173,13 +173,13 @@
 > **Crear 4 particiones**
 
 -----
-> **boot					256MB			ext2			/boot	**
+> **boot					256MB			ext2			/boot**
 
 -----
 > **swap					256MB			areaintercambio	/swap**	
 
 -----
-> **raiz					1GB			ext4			/	**
+> **raiz					1GB			ext4			/**
 
 -----
 > **home					10GB			ext4			/home**	
