@@ -1,5 +1,3 @@
-# documentacion_linux_diplomado
-Contenido del Módulo "Instalación de Linux y Máquinas Virtuales"
 #Linux#
 ##Tema # 1 Comandos de Linux##
 ###1. - Comandos de Archivos y Directorios###
@@ -116,7 +114,7 @@ Contenido del Módulo "Instalación de Linux y Máquinas Virtuales"
 > **chmod 777 nombre_directorio**
 > Da permiso de leer, escribir y ejecutar al directorio
 
-##Tema # 3 KVM##
+##Tema # 2 KVM##
 ###1. - Instalación de KVM###
 > **grep vmx/proc/cpuinfo**
 > Muestra si el computador con procesador intel soporta virtualización
@@ -139,26 +137,26 @@ Contenido del Módulo "Instalación de Linux y Máquinas Virtuales"
 
 ##Tema #2 DEBIAN##
 ###1. - Pasos de instalación###
-> **Bootear el cd**
-> **Seleccionar INSTALL**
-> **Seleccionar idioma Spanish**
-> **Seleccionar país Bolivia**
-> **Seleccionar teclado Latinoamericano**
-> **Escribir el nombre de equipo**
-> **Escribir contraseña root**
-> **Escribir otro usuario y contraseña**
-> **PARTICIONAR LOS DISCOS DUROS**
-> **Seleccionar manual**
-> **Crear 4 particiones**
-> **boot					256MB			ext2			/boot	**
-> **swap					256MB			areaintercambio	/swap	**
-> **raiz					1GB			ext4			/	**
-> **home					10GB			ext4			/home	**
-> **datos(punto de montaje manual)	256MB			ext4			/datos**
-> **Particionar y confirmar**
-> **Instalar los DVDs seleccionar No**
-> **Instalar la red seleccionar No**
-> **Instalar el GRUB seleccionar Si**
+> Bootear el cd
+> Seleccionar INSTALL
+> Seleccionar idioma Spanish
+> Seleccionar país Bolivia
+> Seleccionar teclado Latinoamericano
+> Escribir el nombre de equipo
+> Escribir contraseña root
+> Escribir otro usuario y contraseña
+> PARTICIONAR LOS DISCOS DUROS
+> Seleccionar manual
+> Crear 4 particiones
+> boot					256MB			ext2			/boot	
+> swap					256MB			areaintercambio	/swap	
+> raiz					1GB			ext4			/	
+> home					10GB			ext4			/home	
+> datos(punto de montaje manual)	256MB			ext4			/datos
+> Particionar y confirmar
+> Instalar los DVDs seleccionar No
+> Instalar la red seleccionar No
+> Instalar el GRUB seleccionar Si
 
 ###2. - Aumentar Tamaño del Disco###
 > ** lvextend -L +100M /dev/mapper/nombre_grupo_volumen-PARTICION**
