@@ -135,36 +135,35 @@
 > **adduser nombre_usuario kvm && adduser nombre_usuario libvirt**
 > Añade el usuario como usuario del kvm y del administrador de virtuales
 
+
 ##Tema #2 DEBIAN##
 ###1. - Pasos de instalación###
 
 ----
-
 > **Bootear el cd**
------
 
+----
 > **Seleccionar INSTALL**
 
------
-
+----
 > **Seleccionar idioma Spanish**
 
------
+----
 > **Seleccionar país Bolivia**
 
------
+----
 > **Seleccionar teclado Latinoamericano**
 
------
+----
 > **Escribir el nombre de equipo**
 
------
+----
 > **Escribir contraseña root**
 
------
+----
 > **Escribir otro usuario y contraseña**
 
------
+----
 > **PARTICIONAR LOS DISCOS DUROS**
 
 -----
@@ -203,6 +202,7 @@
 -----
 
 ###2. - Aumentar Tamaño del Disco###
+
 -----
 > ** lvextend -L +100M /dev/mapper/nombre_grupo_volumen-PARTICION**
 
