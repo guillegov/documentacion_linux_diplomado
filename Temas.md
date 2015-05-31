@@ -226,7 +226,7 @@
 ###3. - Reducir Tamaño del Disco###
 
 -----
-> ** umount /dev/mapper/nombre_grupo_volumen-PARTICION**
+> **umount /dev/mapper/nombre_grupo_volumen-PARTICION**
 > Desmontar el disco
 
 -----
