@@ -289,7 +289,7 @@
 > Editar el archivo fstab para que monte automaticamente la particion
 
 -----
-> **dev/mapper/nombre_volumen_grupo-nombre-particion   /mnt/nombre_particion ext3 defaul   0   2**
+> **dev/mapper/nombre_volumen_grupo-nombre-particion   /mnt/nombre_particion ext3 default   0   2**
 
 
 ###5. - Particionar Graficamente con Gparted Live###
