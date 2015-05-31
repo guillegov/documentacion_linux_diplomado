@@ -137,9 +137,11 @@
 
 ##Tema #2 DEBIAN##
 ###1. - Pasos de instalación###
-> Bootear el cd
+> **Bootear el cd**
 -----
-> Seleccionar INSTALL
+
+> **Seleccionar INSTALL**
+
 -----
 > Seleccionar idioma Spanish
 -----
